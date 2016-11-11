@@ -51,7 +51,7 @@ exports.handle = (client) => {
 		},
 
 		prompt() {
-			client.addResponse('app:response:name:greeting')
+			client.addResponse('app:response:name:welcome')
 			client.done()
 		}
 	})
@@ -64,9 +64,6 @@ exports.handle = (client) => {
     },
     autoResponses: {
       // configure responses to be automatically sent as predicted by the machine learning model
-      goodbye: {
-        minConfidence: 0.5
-      }
     },
     streams: {
       greeting: handleGreeting,
